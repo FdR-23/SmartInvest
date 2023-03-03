@@ -1,14 +1,17 @@
 const express = require('express');
 const apicache = require('apicache');
 
+const { FinanceNews } = require('../controllers/getFinaceNews.js')
 
 const cache = apicache.middleware;
 const router = express.Router()
 
+const criptoRoutes = require('../routes/routes_cripto.js')
 
-router.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+
+router.use('/cripto', criptoRoutes)
+
+router.get('/financeNews', FinanceNews)
 
 
 

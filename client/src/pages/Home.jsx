@@ -1,8 +1,12 @@
 import React from 'react'
-
+import SideBar from '../components/Home/SideBar'
 const Home = () => {
     return (
-        <div>Home</div>
+        <div className='h-full bg-blue-500 px-2'>
+            <SideBar />
+
+
+        </div>
     )
 }
 
