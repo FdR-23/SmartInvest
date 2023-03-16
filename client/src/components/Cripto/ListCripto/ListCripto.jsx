@@ -1,24 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-import CriptoList from '../../../services/cripto/CriptoList'
+import { CriptoList } from '../../../services/cripto/servicesCripto.js'
 import ItemCripto from './ItemCripto.jsx';
 
-const ListCripto = () => {
-    const [listCripto, setListCripto] = useState([]);
+import { useFetch } from '../../useFetch';
+
+const ListCoinCripto = () => {
+
+    const { data, loading, error } = useFetch(CriptoList)
 
 
-    useEffect(() => {
-        CriptoList()
-            .then(response => setListCripto(response))
-    }, [])
-
-    
     return (
-        <div className=' w-10/12'>
-            <div className='grid grid-cols-12  border-y border-y-black text-center  
-            text-md font-semibold py-2 box-border'>
+        <div className=' min-w-[900px] max-w-[1200px] '>
+
+            <div id='journal-scroll'
+            className='grid grid-cols-12  border-y border-y-black text-center  
+            text-md font-semibold py-2 box-border flex-nowrap'>
                 <p className="">Rank</p>
-                <p className="col-span-2 text-start">Moneda</p>
+                <p className="col-span-2  text-start">Moneda</p>
                 <p className="col-span-2 text-right">Precio</p>
                 <p className="">1h</p>
                 <p className="">24h</p>
@@ -28,8 +27,9 @@ const ListCripto = () => {
 
             </div>
             <div id='journal-scroll'
-                className='w-full  h-[400px] overflow-y-auto scroll-smooth '>
-                {listCripto && listCripto.map((elements) =>
+                className='w-full  h-[400px] overflow-auto  scroll-smooth '>
+                {loading && <p>Loadinglllllllllll</p>}
+                {data && data.map((elements) =>
                     <ItemCripto
                         key={elements.id}
                         element={elements}
@@ -42,4 +42,4 @@ const ListCripto = () => {
     )
 }
 
-export default ListCripto
+export default ListCoinCripto

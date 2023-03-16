@@ -19,6 +19,7 @@ const ItemCripto = ({ element }) => {
   const currencyFormatter = (value) => {
     const formatter = new Intl.NumberFormat('es-AR', {
       minimumFractionDigits: 2,
+      maximumSignificantDigits: 4,
       currency: "USD",
     })
     return formatter.format(value)
@@ -33,11 +34,11 @@ const ItemCripto = ({ element }) => {
 
   return (
 
-    <div className='overflow-y-auto grid grid-cols-12  gap-1 py-2  text-center box-border'>
+    <div className=' grid grid-cols-12  gap-1 py-2  text-center box-border'>
       <div><p>{market_cap_rank}</p></div>
 
-      <Link to={`/criptomonedas/detalles/${id}`}>
-        <div className='flex flex-row space-x-1 items-center col-span-2 whitespace-nowrap'>
+      <Link className='col-span-2' to={`/criptomonedas/detalles/${id}`}>
+        <div className='flex flex-row space-x-1 items-center  whitespace-nowrap'>
           <img className='w-5' src={image} alt={`${name}_img`} />
           <p className='text-sm font-semibold'>{name}</p>
           <p className='text-[10px] text-gray-500 self-start'>{symbol.toUpperCase()}</p>

@@ -34,7 +34,7 @@ app.use((req, res, next) => {
 
 //Routes
 const routes = require("./routes/index.js");
-app.use("/", router);
+app.use("/", routes);
 
 
 //stating the server

@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import CriptoTendence from '../../services/cripto/CriptoTendence.js'
+import React from 'react'
+import {CriptoTendence} from '../../services/cripto/servicesCripto.js'
+import { useFetch } from '../useFetch.js'
 
 import { Link } from 'react-router-dom'
 const TendenceCripto = () => {
-  const [data, setData] = useState()
 
-  useEffect(() => {
-    CriptoTendence()
-      .then((response) => setData(response))
-  }, [])
+  const { data } = useFetch(CriptoTendence)
 
   return (
-    <div className='mx-2 mt-10'>
-      <h3>Tendencia CoinGecko</h3>
+    <div className='mx-2  mb-4'>
+      <h3 className='py-2 text-lg font-semibold text-center whitespace-nowrap'>Tendencia CoinGecko</h3>
       <div className=''>
         {data && data.map((elemet) =>
           <div key={elemet.item.id} className='grid grid-cols-3 text-[12px] py-2 border-collapse border-b'>
