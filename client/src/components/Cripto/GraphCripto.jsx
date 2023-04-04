@@ -7,6 +7,8 @@ const GraphCripto = ({ id }) => {
     const [day, setDay] = useState(undefined);
     const [info, setInfo] = useState();
 
+
+
     useEffect(() => {
         CriptoGraph(id, day)
             .then((response) => setInfo(response))
@@ -29,7 +31,7 @@ const GraphCripto = ({ id }) => {
     return (
         <div className='w-full  lg:w-[700px] relative'>
             {/* botones */}
-            <div className=' flex pt-3 pr-2 absolute right-0
+            <div className=' flex pt-3 pr-2 absolute right-0 z-10
            
              [&>button]:bg-gray-200 [&>button]:border [&>button]:border-black
               [&>button]:text-center [&>button]:items-center [&>button]:rounded-md
@@ -39,7 +41,7 @@ const GraphCripto = ({ id }) => {
               
               '>
                 <button onClick={() => setDay('1')}
-                    className='border focus:border-white focus:bg-gray-400'>24hs</button>
+                    className='border focus:border-white focus:bg-gray-400 bg-red'>24hs</button>
                 <button onClick={() => setDay('7')}
                     className='border focus:border-white focus:bg-gray-400'>7d</button>
                 <button onClick={() => setDay('14')}
@@ -57,7 +59,7 @@ const GraphCripto = ({ id }) => {
 
             <div className=' flex justify-center  sm:h-[300px]'>
             <ResponsiveContainer  width="100%" height={300} >
-                <AreaChart data={data} margin={{ top: 40, right: 10, bottom: 10, }}>
+                <AreaChart data={data} margin={{ top: 40, right: 10, left:10, bottom: 10, }}>
                     <Area type="Function" dataKey="Price" stroke="#099d4b" activeDot={false} dot={false}
                         fillOpacity={1} fill="url(#colorPv)" />
                     <defs>
