@@ -14,10 +14,10 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route exact path='/' element={<Cripto />} />
         <Route exact path='/criptomonedas' element={<Cripto />} />
         <Route exact path='/criptomonedas/detalles/:id' element={<DetailCripto />} />
-        <Route exact path='/noticias' element={<Noticias />} />
+     
       </Routes>
       <Footer />
     </Router>

@@ -2,32 +2,18 @@ import React from "react";
 
 import { GlobalInfo } from "../../services/cripto/servicesCripto.js";
 import { useFetch } from "../useFetch.js";
+import { currencyWithoutDecimal } from "../../services/currencyFormatsWithoutDecimal.js";
 
 const InfoGlobal = () => {
   const { data } = useFetch(GlobalInfo);
 
-  const currencyFormatter = (value) => {
-    const formatter = new Intl.NumberFormat("es-AR", {
-      minimumFractionDigits: 2,
-      currency: "USD",
-    });
-    return formatter.format(value);
-  };
-
-  const currencyFormatterWithoutDecimal = (value) => {
-    const formatter = new Intl.NumberFormat("es-AR", {
-      currency: "USD",
-    });
-    return formatter.format(value);
-  };
-
   return (
     <div
-      className="flex flex-row w-full min-w-[1024px] overflow-auto  animate-slide-in 
+      className="flex flex-row w-full min-w-[1024px] overflow-auto  animate-slide-in  
 
         [&>div]:flex [&>div]:items-center [&>div]:space-x-1 justify-around p-2 
         [&>div>span]:text-blue-600 [&>div>span]:text-[12px] 
-        [&>div>p]:text-[12px] [&>div>p]:font-semibold  "
+        [&>div>p]:text-[12px] [&>div>p]:font-semibold "
     >
       <div>
         <p>Monedas:</p>
@@ -42,7 +28,7 @@ const InfoGlobal = () => {
       <div>
         <p>Cap.de mercado:</p>
         <span>
-          {data && currencyFormatterWithoutDecimal(data.total_market_cap.usd)}{" "}
+          {data && currencyWithoutDecimal(data.total_market_cap.usd)}{" "}
           <span>US$</span>
         </span>
       </div>
@@ -50,7 +36,7 @@ const InfoGlobal = () => {
       <div>
         <p>Volumen en 24 h:</p>
         <span>
-          {data && currencyFormatterWithoutDecimal(data.total_volume.usd)}{" "}
+          {data && currencyWithoutDecimal(data.total_volume.usd)}{" "}
           <span>US$</span>
         </span>
       </div>

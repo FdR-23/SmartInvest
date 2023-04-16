@@ -7,8 +7,8 @@ html {
   @apply w-full h-full
 }
 
-body {
-  @apply max-w-screen-xl h-screen m-auto flex flex-col
+body { 
+  @apply max-w-screen-xl h-screen m-auto flex flex-col bg-gray-200 text-[#112136]
 }
 
 

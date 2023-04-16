@@ -40,7 +40,7 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
                     className=' h-[400px] overflow-auto scroll-smooth   '>
 
                     {data && data.tickers.map((ticker, index) =>
-                        <div key={index} className='overflow-y-auto grid grid-cols-12  gap-1 py-2  text-center box-border border-b'>
+                        <div key={index} className='overflow-y-auto grid grid-cols-12  gap-1 py-2  text-center box-border border-b last:border-b-0'>
                             <div className='col-span-1 self-center'>{index + 1}</div>
                             <div className='col-span-2 flex  items-center space-x-2 text-sm '>
                                 <img

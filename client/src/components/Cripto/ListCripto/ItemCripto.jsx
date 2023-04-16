@@ -34,10 +34,10 @@ const ItemCripto = ({ element }) => {
 
   return (
 
-    <div className=' grid grid-cols-12  gap-1 py-2  text-center box-border'>
+    <div className=' grid grid-cols-12  gap-1 py-2  text-center box-border hover:bg-[#89BBD9]/30'>
       <div><p>{market_cap_rank}</p></div>
 
-      <Link className='col-span-2' to={`/criptomonedas/detalles/${id}`}>
+      <Link  reloadDocument={true} className='col-span-2' to={`/criptomonedas/detalles/${id}`}>
         <div className='flex flex-row space-x-1 items-center  whitespace-nowrap'>
           <img className='w-5' src={image} alt={`${name}_img`} />
           <p className='text-sm font-semibold'>{name}</p>
