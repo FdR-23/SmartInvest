@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+  font-family: awesome brands;
+  src: url('../src/assets/font/fa-brands-400.ttf')
+}
 
 html {
   @apply w-full h-full

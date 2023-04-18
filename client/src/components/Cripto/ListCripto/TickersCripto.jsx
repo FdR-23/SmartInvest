@@ -15,14 +15,18 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
 
     return (
         <div className='px-2'>
-            <h3
-                className='text-xl font-bold sm:ml-5 p-2'>
-                {data?.name} Markets
-            </h3>
+
+            <div className='border-b border-black'>
+                <h3
+                    className='text-2xl font-bold whitespace-nowrap  -skew-x-12 sm:ml-5 p-2 '>
+                    {data?.name} Markets
+                </h3>
+            </div>
+
             <div className='m-auto pt-2 min-w-[1000px] max-w-[1200px] '>
                 <div id='journal-scroll'
                     className='grid grid-cols-12  border-y  text-center  
-                    text-sm font-bold py-1 box-border    '>
+                    text-sm font-bold py-1 box-border'>
                     <p className="">#</p>
                     <p className="col-span-2  text-start">Exchange</p>
                     <p className="text-center">Pair</p>
@@ -37,10 +41,11 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
                 </div>
 
                 <div id='journal-scroll'
-                    className=' h-[400px] overflow-auto scroll-smooth   '>
+                    className=' h-[400px] overflow-auto scroll-smooth'>
 
                     {data && data.tickers.map((ticker, index) =>
-                        <div key={index} className='overflow-y-auto grid grid-cols-12  gap-1 py-2  text-center box-border border-b last:border-b-0'>
+                        <div key={index} className='overflow-y-auto grid grid-cols-12 
+                         gap-1 py-2  text-center box-border border-b last:border-b-0 hover:bg-[#89BBD9]/30 rounded-b-lg '>
                             <div className='col-span-1 self-center'>{index + 1}</div>
                             <div className='col-span-2 flex  items-center space-x-2 text-sm '>
                                 <img
@@ -49,7 +54,7 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
                                 <p>{ticker.market.name}</p>
                             </div>
                             <div className='text-center text-sm text-blue-600 self-center '>
-                                <a href={ticker.trade_url} target="_blank" rel="noopener noreferrer" ><p>{ticker.base.slice(0,5)}/{ticker.target.slice(0,5)}</p></a>
+                                <a href={ticker.trade_url} target="_blank" rel="noopener noreferrer" ><p>{ticker.base.slice(0, 5)}/{ticker.target.slice(0, 5)}</p></a>
 
                             </div>
                             <div className='text-xs text-center self-center'>
@@ -71,9 +76,9 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
                                 <p>{handlePorcetVol24hs(ticker.converted_volume.usd).toFixed(2)}<span>%</span></p>
                             </div>
                             <div className='relative '>
-                                <span className={`${ticker.trust_score === 'green' ? 'bg-green-600' : 
-                                ticker.trust_score === 'yellow'? 'bg-yellow-400' :
-                                ticker.trust_score === 'red'? 'bg-red-600': 'bg-gray-600'}
+                                <span className={`${ticker.trust_score === 'green' ? 'bg-green-600' :
+                                    ticker.trust_score === 'yellow' ? 'bg-yellow-400' :
+                                        ticker.trust_score === 'red' ? 'bg-red-600' : 'bg-gray-600'}
                             w-3.5 h-3.5 rounded-full absolute m-auto top-0 bottom-0 left-0 right-0`}></span>
                             </div>
 

@@ -8,8 +8,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      fontFamily: {
+        awesome_brands_6: ['awesome brands']
+      },
       animation: {
-        "slide-in": "slide-in 8s cubic-bezier(0.1, 0.7, 1, 0.1) forwards infinite",
+        "slide-in": "slide-in 12s cubic-bezier(0.1, 0, 0.8, 0) forwards infinite",
       },
 
       keyframes: {

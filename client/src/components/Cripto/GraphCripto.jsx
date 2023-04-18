@@ -41,17 +41,17 @@ const GraphCripto = ({ id }) => {
               
               '>
                 <button onClick={() => setDay('1')}
-                    className='border focus:border-white focus:bg-gray-400 bg-red'>24hs</button>
+                    className='border text-[#112136] font-semibold focus:border-white focus:bg-gray-400 bg-red'>24hs</button>
                 <button onClick={() => setDay('7')}
-                    className='border focus:border-white focus:bg-gray-400'>7d</button>
+                    className='border text-[#112136] font-semibold focus:border-white focus:bg-gray-400'>7d</button>
                 <button onClick={() => setDay('14')}
-                    className='border focus:border-white focus:bg-gray-400'>14d</button>
+                    className='border text-[#112136] font-semibold focus:border-white focus:bg-gray-400'>14d</button>
                 <button onClick={() => setDay('30')}
-                    className='border focus:border-white focus:bg-gray-400'>30d</button>
+                    className='border text-[#112136] font-semibold focus:border-white focus:bg-gray-400'>30d</button>
                 <button onClick={() => setDay('90')}
-                    className='border focus:border-white focus:bg-gray-400'>90d</button>
+                    className='border text-[#112136] font-semibold focus:border-white focus:bg-gray-400'>90d</button>
                 <button onClick={() => setDay('max')}
-                    className='border focus:border-white focus:bg-gray-400'>MAX</button>
+                    className='border text-[#112136] font-semibold focus:border-white focus:bg-gray-400'>MAX</button>
             </div>
 
 
@@ -70,10 +70,10 @@ const GraphCripto = ({ id }) => {
                     </defs>
                     <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
                     <XAxis
-                        tick={{ fontSize: 12, fill: 'black', fontWeight: 'bold' }}
+                        tick={{ fontSize: 10, fill: 'black', fontWeight: 'bold' }}
                         dataKey="Date" tickFormatter={dateFormatter} />
                     <YAxis
-                        tick={{ fontSize: 12, fill: 'black', fontWeight: 'bold' }}
+                        tick={{ fontSize: 10, fill: 'black', fontWeight: 'bold' }}
                         domain={['dataMin', 'dataMax']}
                         tickFormatter={(value) =>
                             value.toLocaleString('en-US', {
