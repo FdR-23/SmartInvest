@@ -5,7 +5,7 @@ import GraphCripto from '../components/Cripto/GraphCripto.jsx';
 import TickersCripto from '../components/Cripto/ListCripto/TickersCripto.jsx';
 import { CriptoDetail } from '../services/cripto/servicesCripto.js';
 import { currencyFormatter } from '../services/currencyFormats.js';
-import { currencyWithoutDecimals } from '../services/currencyFormatswithoutDecimal.js';
+import {currencyWithoutDecimals} from '../services/currencyWithoutDecimals.js'
 import { convertMilisecondsToDate, convertISODate } from '../services/convertDate.js';
 import { useFetch } from '../components/useFetch.js';
 
