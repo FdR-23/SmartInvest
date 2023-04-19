@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { TickerCripto } from '../../../services/cripto/servicesCripto.js'
-import { currencyWithoutDecimal } from '../../../services/currencyFormatswithoutDecimal.js'
+import {currencyWithoutDecimals} from '../services/currencyWithoutDecimals.js'
 import { useFetch } from '../../useFetch.js'
 
 const TickersCripto = ({ id, totalVolumen24Hs }) => {
