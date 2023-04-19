@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { TickerCripto } from '../../../services/cripto/servicesCripto.js'
-import {currencyWithoutDecimals} from '../services/currencyWithoutDecimals.js'
+import { currencyWithoutDecimals } from '../../../services/currencyWithoutDecimals.js'
 import { useFetch } from '../../useFetch.js'
 
 const TickersCripto = ({ id, totalVolumen24Hs }) => {
@@ -58,19 +58,19 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
 
                             </div>
                             <div className='text-xs text-center self-center'>
-                                <p><span>$</span> {currencyWithoutDecimal(ticker.converted_last.usd)}</p>
+                                <p><span>$</span> {currencyWithoutDecimals(ticker.converted_last.usd)}</p>
                             </div>
                             <div className='text-xs self-center'>
                                 <p>{(ticker.bid_ask_spread_percentage?.toFixed(2))}<span>%</span></p>
                             </div>
                             <div className='text-xs whitespace-nowrap self-center' >
-                                <p><span>$</span> {currencyWithoutDecimal(ticker.cost_to_move_up_usd.toFixed(0))}</p>
+                                <p><span>$</span> {currencyWithoutDecimals(ticker.cost_to_move_up_usd.toFixed(0))}</p>
                             </div>
                             <div className='text-xs self-center'>
-                                <p><span>$</span> {currencyWithoutDecimal(ticker.cost_to_move_down_usd.toFixed(0))}</p>
+                                <p><span>$</span> {currencyWithoutDecimals(ticker.cost_to_move_down_usd.toFixed(0))}</p>
                             </div>
                             <div className='col-span-2 text-xs whitespace-nowrap self-center'>
-                                <p><span>$</span> {currencyWithoutDecimal(ticker.converted_volume.usd)}</p>
+                                <p><span>$</span> {currencyWithoutDecimals(ticker.converted_volume.usd)}</p>
                             </div>
                             <div className='text-xs whitespace-nowrap self-center'>
                                 <p>{handlePorcetVol24hs(ticker.converted_volume.usd).toFixed(2)}<span>%</span></p>
