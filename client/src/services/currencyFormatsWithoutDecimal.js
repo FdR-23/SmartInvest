@@ -1,4 +1,4 @@
-export const currencyWithoutDecimal = (value) => {
+export const currencyWithoutDecimals = (value) => {
   const formatter = new Intl.NumberFormat('en-US', {
     currency: "USD",
   })

@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import GraphCripto from '../components/Cripto/GraphCripto.jsx';
 import TickersCripto from '../components/Cripto/ListCripto/TickersCripto.jsx';
 import { CriptoDetail } from '../services/cripto/servicesCripto.js';
-import { currencyWithoutDecimal } from '../services/currencyFormatswithoutDecimal.js';
 import { currencyFormatter } from '../services/currencyFormats.js';
+import { currencyWithoutDecimals } from '../services/currencyFormatswithoutDecimal.js';
 import { convertMilisecondsToDate, convertISODate } from '../services/convertDate.js';
 import { useFetch } from '../components/useFetch.js';
 
@@ -71,21 +71,21 @@ const DetailCripto = () => {
                       <span className='col-span-1 text-sm font-semibold whitespace-nowrap'>
                         Market Cap:</span>
                       <p className='col-span-2 text-sm whitespace-nowrap text-end'>
-                        <span>US$</span> {currencyWithoutDecimal(data && data.simplePrice[id].usd_market_cap)}</p>
+                        <span>US$</span> {currencyWithoutDecimalss(data && data.simplePrice[id].usd_market_cap)}</p>
                     </div>
 
                     <div className='grid grid-cols-3 border-b pb-1 mt-4 border-[#112136]/10'>
                       <span className='col-span-1 text-sm  font-semibold whitespace-nowrap'>
                         24 Hour Trading Vol:</span>
                       <p className='col-span-2 text-sm whitespace-nowrap text-end'>
-                        <span>US$</span> {currencyWithoutDecimal(data && data.simplePrice[id].usd_24h_vol)}</p>
+                        <span>US$</span> {currencyWithoutDecimals(data && data.simplePrice[id].usd_24h_vol)}</p>
                     </div>
 
                     <div className='grid grid-cols-3 border-b pb-1 mt-4 border-[#112136]/10'>
                       <span className='col-span-1 text-sm font-semibold whitespace-nowrap'>
                         Fully Diluted Valuation:</span>
                       <p className='col-span-2 text-sm whitespace-nowrap text-end'>
-                        <span>US$</span> {currencyWithoutDecimal(data && data.currentData.market_data.fully_diluted_valuation.usd)}</p>
+                        <span>US$</span> {currencyWithoutDecimals(data && data.currentData.market_data.fully_diluted_valuation.usd)}</p>
                     </div>
                   </div>
                   <div className=' flex flex-col '>
@@ -93,21 +93,21 @@ const DetailCripto = () => {
                       <span className='col-span-1 text-sm font-semibold whitespace-nowrap'>
                         Circulating Supply:</span>
                       <p className='col-span-2 text-sm whitespace-nowrap text-end'>
-                        {currencyWithoutDecimal(data && data.currentData.market_data.circulating_supply)}</p>
+                        {currencyWithoutDecimals(data && data.currentData.market_data.circulating_supply)}</p>
                     </div>
 
                     <div className='grid grid-cols-3 border-b pb-1 mt-4 border-[#112136]/10'>
                       <span className='col-span-1 text-sm font-semibold whitespace-nowrap'>
                         Max Supply:</span>
                       <p className='col-span-2 text-sm whitespace-nowrap text-end'>
-                        {currencyWithoutDecimal(data && data.currentData.market_data.max_supply)}</p>
+                        {currencyWithoutDecimals(data && data.currentData.market_data.max_supply)}</p>
                     </div>
 
                     <div className='grid grid-cols-3 border-b pb-1 mt-4  border-[#112136]/10'>
                       <span className='col-span-1 text-sm font-semibold whitespace-nowrap '>
                         Total Supply:</span>
                       <p className='col-span-2 text-sm whitespace-nowrap text-end'>
-                        {currencyWithoutDecimal(data && data.currentData.market_data.total_supply)}</p>
+                        {currencyWithoutDecimals(data && data.currentData.market_data.total_supply)}</p>
                     </div>
 
                   </div>
@@ -255,7 +255,7 @@ const DetailCripto = () => {
                 </div>
 
                 <div className='flex col-span-2 justify-end p-2 text-[14px]'>
-                  <p>${data && currencyWithoutDecimal(data.currentData?.market_data.total_volume.usd)}</p>
+                  <p>${data && currencyWithoutDecimals(data.currentData?.market_data.total_volume.usd)}</p>
                 </div>
               </div>
               <div className='grid grid-cols-4 '>
@@ -264,7 +264,7 @@ const DetailCripto = () => {
                 </div>
 
                 <div className=' flex col-span-2 justify-end p-2 text-[14px]'>
-                  <p>${data && currencyWithoutDecimal(data.currentData?.market_data.market_cap.usd)}</p>
+                  <p>${data && currencyWithoutDecimals(data.currentData?.market_data.market_cap.usd)}</p>
                 </div>
               </div>
 
