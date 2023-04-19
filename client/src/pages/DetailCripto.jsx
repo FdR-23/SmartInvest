@@ -219,7 +219,7 @@ const DetailCripto = () => {
               </div>
 
               <div className='grid grid-cols-4 '>
-                <div className='col-span-2 p-2 pl-0'>
+                <div className='col-span-2 p-2 pl-2'>
                   <p className='font-semibold text-[14px]'>Rank</p>
                 </div>
 
@@ -229,7 +229,7 @@ const DetailCripto = () => {
               </div>
 
               <div className='grid grid-cols-4 '>
-                <div className='col-span-2 p-2 pl-0'>
+                <div className='col-span-2 p-2 pl-2'>
                   <p className='font-semibold text-[14px]'>Price:</p>
                 </div>
 
@@ -239,7 +239,7 @@ const DetailCripto = () => {
               </div>
 
               <div className='grid grid-cols-4 '>
-                <div className='flex col-span-2 p-2 pl-0'>
+                <div className='flex col-span-2 p-2 pl-2'>
                   <p className='font-semibold text-[14px]'>24h Low / 24h High</p>
                 </div>
 
@@ -250,7 +250,7 @@ const DetailCripto = () => {
               </div>
 
               <div className='grid grid-cols-4'>
-                <div className=' flex col-span-2 p-2 pl-0'>
+                <div className=' flex col-span-2 p-2 pl-2'>
                   <p className='font-semibold text-[14px]'>Trading Volume</p>
                 </div>
 
@@ -259,7 +259,7 @@ const DetailCripto = () => {
                 </div>
               </div>
               <div className='grid grid-cols-4 '>
-                <div className=' flex col-span-2 p-2 pl-0'>
+                <div className=' flex col-span-2 p-2 pl-2'>
                   <p className='font-semibold text-[14px]'>Market Cap</p>
                 </div>
 
@@ -269,7 +269,7 @@ const DetailCripto = () => {
               </div>
 
               <div className='grid grid-cols-4 '>
-                <div className=' flex col-span-2 p-2 pl-0'>
+                <div className=' flex col-span-2 p-2 pl-2'>
                   <p className='font-semibold text-[14px]'>All-Time High</p>
                 </div>
                 <div className=' flex flex-col col-span-2 p-2'>
@@ -284,7 +284,7 @@ const DetailCripto = () => {
               </div>
 
               <div className='grid grid-cols-4'>
-                <div className=' flex col-span-2 p-2 pl-0'>
+                <div className=' flex col-span-2 p-2 pl-2'>
                   <p className='font-semibold text-[14px]'>All-Time High</p>
                 </div>
                 <div className=' flex flex-col col-span-2 p-2'>
