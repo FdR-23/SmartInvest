@@ -2,7 +2,7 @@ import React from "react";
 
 import { GlobalInfo } from "../../services/cripto/servicesCripto.js";
 import { useFetch } from "../useFetch.js";
-import { currencyWithoutDecimal } from "../../services/currencyFormatsWithoutDecimal.js";
+import { currencyWithoutDecimals } from "../../services/currencyWithoutDecimals.js";
 
 const InfoGlobal = () => {
   const { data } = useFetch(GlobalInfo);
@@ -28,7 +28,7 @@ const InfoGlobal = () => {
       <div>
         <p>Cap.de mercado:</p>
         <span>
-          {data && currencyWithoutDecimal(data.total_market_cap.usd)}{" "}
+          {data && currencyWithoutDecimals(data.total_market_cap.usd)}{" "}
           <span>US$</span>
         </span>
       </div>
@@ -36,7 +36,7 @@ const InfoGlobal = () => {
       <div>
         <p>Volumen en 24 h:</p>
         <span>
-          {data && currencyWithoutDecimal(data.total_volume.usd)}{" "}
+          {data && currencyWithoutDecimals(data.total_volume.usd)}{" "}
           <span>US$</span>
         </span>
       </div>
