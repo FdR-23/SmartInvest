@@ -71,7 +71,7 @@ const DetailCripto = () => {
                       <span className='col-span-1 text-sm font-semibold whitespace-nowrap'>
                         Market Cap:</span>
                       <p className='col-span-2 text-sm whitespace-nowrap text-end'>
-                        <span>US$</span> {currencyWithoutDecimalss(data && data.simplePrice[id].usd_market_cap)}</p>
+                        <span>US$</span> {currencyWithoutDecimals(data && data.simplePrice[id].usd_market_cap)}</p>
                     </div>
 
                     <div className='grid grid-cols-3 border-b pb-1 mt-4 border-[#112136]/10'>
