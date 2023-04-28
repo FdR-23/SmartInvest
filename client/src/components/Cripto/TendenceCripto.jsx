@@ -5,14 +5,15 @@ import { useFetch } from '../useFetch.js'
 import { Link } from 'react-router-dom'
 const TendenceCripto = () => {
 
-  const { data } = useFetch(CriptoTendence)
+  const { data, loading } = useFetch(CriptoTendence)
 
+  if(loading == true)
+   return <div>Loading</div> 
   return (
     <div className='mx-8 sm:mx-2 sm:mb-4 '>
       <div className='flex-nowrap '>
         <h3 className='text-lg font-bold text-center  whitespace-nowrap -skew-x-12  box-border'>
           Tendencia CoinGecko</h3>
-
       </div>
       <div className='px-6 sm:px-0 bg-gray-500/10 rounded-b-lg mt-1'>
         {data && data.map((elemet) =>
