@@ -9,8 +9,7 @@ const FinanceNews = async (req, res) => {
     const dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000))
         .toISOString()
         .split("T")[0];
-
-
+//esta mal todo esto hay que arreglar
     console.log(dateString)
     try {
 
@@ -19,10 +18,11 @@ const FinanceNews = async (req, res) => {
 
                 domains: 'elpais.com/economia',
             }).then(response => console.log(response))
-
+            
+            console.log("data",data)
             res
             .status(202)
-            .json(data)
+            .send("data")
 
         }
     catch (error) {
@@ -32,4 +32,4 @@ const FinanceNews = async (req, res) => {
 
 
 
-module.exports = { FinanceNews };
+module.exports =  FinanceNews;
