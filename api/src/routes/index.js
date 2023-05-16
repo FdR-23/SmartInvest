@@ -9,7 +9,7 @@ const router = express.Router()
 const criptoRoutes = require('../routes/routes_cripto.js')
 
 
-router.use('/cripto',cache('5 minutes'), criptoRoutes)
+router.use('/cripto',cache('3 minutes'), criptoRoutes)
 
 router.get('/finance_news', FinanceNews)
 
