@@ -53,7 +53,7 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
                                     src={ticker.market.logo} />
                                 <p>{ticker.market.name}</p>
                             </div>
-                            <div className='text-center text-sm text-blue-600 self-center '>
+                            <div className='text-center text-sm text-blue-600 self-center font-semibold'>
                                 <a href={ticker.trade_url} target="_blank" rel="noopener noreferrer" ><p>{ticker.base.slice(0, 5)}/{ticker.target.slice(0, 5)}</p></a>
 
                             </div>
