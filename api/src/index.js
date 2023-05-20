@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const router = require('./routes/index.js');
 
@@ -36,8 +37,28 @@ app.use((req, res, next) => {
 const routes = require("./routes/index.js");
 app.use("/", routes);
 
+//para la base de datos 
+
+const sequelize = require('./db.js')
+//import models
+
+const Cripto = require('./models/cripto.js')
+
 
 //stating the server
-app.listen(PORT, () => {
+async function main() {
+  try {
+    await sequelize.authenticate();
+    await sequelize.sync({ force: false });
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+
+  app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`)
   })
+}
+
+
+main();
