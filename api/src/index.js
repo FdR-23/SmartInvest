@@ -50,10 +50,10 @@ const {
   updateListCripto,
   updateTendence,
   updateDetails,
-  updateTickets } = require('./updatedb.js')
+  updateTickets,
+} = require('./updatedb.js')
 
 
-//stating the server
 async function main() {
   try {
     await sequelize.sync({ force: false });
@@ -65,13 +65,13 @@ async function main() {
   app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`);
     const intervalsUpdate = 30 * 60 * 1000;
-
+    const intersTickets = 12 * 60 * 60 * 1000;
     //update
     setInterval(updateListCripto, intervalsUpdate)
     setInterval(updateTendence, intervalsUpdate)
     //clearAll
     setInterval(updateDetails, intervalsUpdate)
-    setInterval(updateTickets, intervalsUpdate)
+    setInterval(updateTickets, intersTickets)
   })
 }
 

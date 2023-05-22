@@ -154,4 +154,10 @@ const updateTickets = async () => {
 };
 
 
-module.exports = { updateListCripto, updateTendence, updateDetails, updateTickets }
+module.exports = {
+    updateListCripto,
+    updateTendence,
+    updateDetails,
+    updateTickets
+    
+}

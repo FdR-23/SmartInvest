@@ -13,7 +13,7 @@ const ticketCripto = async (req, res) => {
             .json({ ticket })
     } else {
         try {
-            const tickets = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}/tickers?include_exchange_logo=true&depth=true`)
+            const tickets = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}/tickers?include_exchange_logo=true&order=trust_score_asc&depth=true`)
                 .then((response) => response.data)
                 .then((data) => {
                     return {
