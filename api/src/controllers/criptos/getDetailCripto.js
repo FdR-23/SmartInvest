@@ -5,7 +5,6 @@ const getDetailCripto = async (req, res) => {
     const { id } = req.params;
     const details = await DetailCripto.findByPk(id);
 
-    
     if (Boolean(details)) {
         res
             .status(200)

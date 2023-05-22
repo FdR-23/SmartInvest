@@ -11,7 +11,7 @@ const getListCoint = async (req, res) => {
             .status(200)
             .json({ listCripto })
     } else {
-        console.log("entra aca ")
+
         try {
             const info = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=50&page=1&price_change_percentage=1h%2C24h%2C7d")
                 .then(response => response.data)

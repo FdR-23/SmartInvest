@@ -7,7 +7,6 @@ import { useFetch } from '../../useFetch.js'
 const TickersCripto = ({ id, totalVolumen24Hs }) => {
 
     const { data } = useFetch(TickerCripto, id, [id])
-
     const handlePorcetVol24hs = (volumen24Hs) => {
         let porcent = (volumen24Hs * 100) / totalVolumen24Hs;
         return porcent
@@ -42,7 +41,7 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
                 <div id='journal-scroll'
                     className=' h-[400px] overflow-auto scroll-smooth'>
 
-                    {data && data.tickers.map((ticker, index) =>
+                    {data && data?.tickers.map((ticker, index) =>
                         <div key={index} className='overflow-y-auto grid grid-cols-12 
                          gap-1 py-2  text-center box-border border-b last:border-b-0 hover:bg-[#89BBD9]/30 rounded-b-lg '>
                             <div className='col-span-1 self-center'>{index + 1}</div>
@@ -53,7 +52,7 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
                                 <p>{ticker.market.name}</p>
                             </div>
                             <div className='text-center text-sm text-blue-600 self-center font-semibold'>
-                                <a href={ticker.trade_url} target="_blank" rel="noopener noreferrer" ><p>{ticker.base.slice(0, 5)}/{ticker.target.slice(0, 5)}</p></a>
+                                <a href={ticker.trade_url} target="_blank" rel="noopener noreferrer" ><p>{ticker.base}/{ticker.target}</p></a>
 
                             </div>
                             <div className='text-xs text-center self-center'>

@@ -55,7 +55,7 @@ export const TickerCripto = async (controller, id) => {
     const data = axios.get(`/cripto/tickets/${id}`, {
         signal: controller.signal
     })
-        .then(response => response.data)
+        .then(response => response.data.ticket)
     return data
 }
 

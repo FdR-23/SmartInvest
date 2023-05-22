@@ -124,10 +124,11 @@ const DetailCripto = () => {
                 <h3 className='text-xl font-bold whitespace-nowrap ml-2 -skew-x-6'>Info</h3>
               </div>
 
-              <div className='items-center'>
+              <div className='items-center '>
                 <p className='col-span-1 font-semibold'>Website:</p>
-                <a className='col-span-3 text-base text-center font-semibold self-center whitespace-pre-wrap'
-                  href={data?.currentdata.links.homepage} target="_blank" rel="noopener noreferrer">{data?.currentdata.links.homepage}</a>
+                <a className='col-span-3 text-base text-center font-semibold self-center  overflow-hidden  text-ellipsis'
+                  href={data?.currentdata.links.homepage} target="_blank" rel="noopener noreferrer">{data?.currentdata.links.homepage}
+                </a>
               </div>
               <div className='items-center'>
                 <div className='col-span-1 flex'>
@@ -242,8 +243,8 @@ const DetailCripto = () => {
                 </div>
 
                 <div className=' flex col-span-2 justify-end p-2 text-base font-bold'>
-                  <p ><span>${data && currencyFormatter(data.currentdata?.market_data.high_24h.usd)}</span> /
-                    <span> ${data && currencyFormatter(data.currentdata?.market_data.low_24h.usd)}</span></p>
+                  <p ><span>${data && currencyFormatter(data.currentdata?.market_data.high_24h.usd.toFixed(4))}</span> /
+                    <span> ${data && currencyFormatter(data.currentdata?.market_data.low_24h.usd.toFixed(4))}</span></p>
                 </div>
               </div>
 

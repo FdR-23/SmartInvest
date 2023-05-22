@@ -1,7 +1,8 @@
 const axios = require('axios');
-const ListCripto = require('./models/list_cripto.js')
-const TendencesCripto = require('./models/list_tendence_cripto.js')
-const DetailCripto = require('./models/detail_cripto.js')
+const ListCripto = require('./models/list_cripto.js');
+const TendencesCripto = require('./models/list_tendence_cripto.js');
+const DetailCripto = require('./models/detail_cripto.js');
+const TicketsCripto = require('./models/tickertcripto.js');
 
 const updateListCripto = async () => {
     const listCripto = await ListCripto.findAll();
@@ -65,7 +66,7 @@ const updateListCripto = async () => {
     } else {
         return "no paso nada updateListCripto"
     }
-}
+};
 
 const updateTendence = async () => {
     const listTendence = await TendencesCripto.findAll();
@@ -114,8 +115,7 @@ const updateTendence = async () => {
     } else {
         return "no paso nada updateTendence"
     }
-
-}
+};
 
 const updateDetails = async () => {
     const details = await DetailCripto.findAll();
@@ -133,6 +133,25 @@ const updateDetails = async () => {
     } else {
         return "no paso nada updateDetails"
     }
+};
 
-}
-module.exports = { updateListCripto, updateTendence, updateDetails }
+const updateTickets = async () => {
+    const tickets = await TicketsCripto.findAll();
+    if (Boolean(tickets)) {
+        try {
+            TicketsCripto.destroy({
+                where: {},
+                truncate: true
+            });
+
+        } catch (error) {
+            return error
+        }
+
+    } else {
+        return "no paso nada updateDetails"
+    }
+};
+
+
+module.exports = { updateListCripto, updateTendence, updateDetails, updateTickets }
