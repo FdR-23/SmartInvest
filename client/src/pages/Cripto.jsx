@@ -7,22 +7,20 @@ import NewsCripto from "../components/Cripto/NewsCripto.jsx";
 
 const Cripto = () => {
   return (
-    <div id="cripto" className="flex flex-col [&>section]:py-4 mx-4">
+    <div id="cripto" className="flex flex-col sm:[&>section]:py-4 mx-4">
       
       <div className="overflow-hidden">
         <InfoGlobal />
       </div>
 
-      <section className="w-full h-full px-2">
+      <section className="w-full h-full sm:px-2">
         <h2 className="text-2xl font-bold p-2 whitespace-nowrap border-b border-black -skew-x-12">
           Noticias Cripto
         </h2>
-        <>
-          <NewsCripto />
-        </>
+          <NewsCripto />  
       </section>
 
-      <section className="px-2">
+      <section className="sm:px-2">
         <h2 className="text-2xl font-bold p-2 whitespace-nowrap border-b border-black -skew-x-12">
           Lista de Cripto Monedas
         </h2>

@@ -19,15 +19,12 @@ const NewsCripto = () => {
         setNews(prop);
     };
 
-
-
-
     return (
-        <div className='mb-[50px] w-full h-full relative box-border'>
+        <div className='mb-[50px] w-full h-full relative box-border '>
 
-            <div className='min-h-[500px]  px-2 pt-[16px] flex flex-col sm:flex-row space-x-2'>
+            <div className='min-h-[500px]   pt-[16px] flex flex-col sm:flex-row space-x-2 sm:px-2'>
 
-                <article className=' sm:w-[300px] md:w-[500px] lg:w-[700px]  flex flex-col text-center relative mb-4 sm:m-4'>
+                <article className=' sm:w-[300px] md:w-[500px] lg:w-[700px]  flex flex-col text-center relative mb-8 sm:mb-4 sm:m-4'>
                     {/* Skeleton Header
                     <div className={`${loading ? `flex justify-center items-center relative rounded-sm
                         w-[250px] h-[200px] sm:h-[200px] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[300px]
@@ -78,7 +75,7 @@ const NewsCripto = () => {
                 </article>
 
                 {/* 5 PRINCIPAL NEWS  */}
-                <div className=' relative  h-[500px] block flex-1 rounded-md overflow-hidden pl-4 pr-10'>
+                <div className=' relative  h-[500px] block flex-1 rounded-md overflow-hidden sm:pl-4 sm:pr-10'>
                     <div className=' py-1 mb-2'>
                         <h3 className='text-xl font-bold text-start  whitespace-nowrap -skew-x-12 ml-2'>Top 5 Popular News</h3>
                     </div>
