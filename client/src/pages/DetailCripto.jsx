@@ -27,7 +27,7 @@ const DetailCripto = () => {
   }
 
   return (
-    <div className=' [&>section]:py-4 mx-4'>
+    <div className='[&>section]:py-4 sm:mx-4'>
 
       <section className="w-full h-full px-2">
 
@@ -190,7 +190,6 @@ const DetailCripto = () => {
 
 
       <section>
-
         {/*//GraphCripto */}
         <div className='flex flex-col sm:flex-row w-full px-2 box-border'>
           <div className='flex  flex-col flex-wrap w-full sm:w-[400px] md:w-[600px] lg:w-[700px]  box-border '>
