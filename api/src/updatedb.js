@@ -3,6 +3,7 @@ const ListCripto = require('./models/list_cripto.js');
 const TendencesCripto = require('./models/list_tendence_cripto.js');
 const DetailCripto = require('./models/detail_cripto.js');
 const TicketsCripto = require('./models/tickertcripto.js');
+const GlobalInfoCripto = require('./models/global_info.js')
 
 const updateListCripto = async () => {
     const listCripto = await ListCripto.findAll();
@@ -153,11 +154,30 @@ const updateTickets = async () => {
     }
 };
 
+const updateGlobalInfoCripto = async () => {
+    const globalInfoDB = await GlobalInfoCripto.findOne({wehere:{id: 1}});
+    if (Boolean(globalInfoDB)) {
+        try {
+            TicketsCripto.destroy({
+                where: {},
+                truncate: true
+            });
+
+        } catch (error) {
+            return error
+        }
+
+    } else {
+        return "no paso nada updateGlobalInfoCripto"
+    }
+};
+
 
 module.exports = {
     updateListCripto,
     updateTendence,
     updateDetails,
-    updateTickets
+    updateTickets,
+    updateGlobalInfoCripto
     
 }

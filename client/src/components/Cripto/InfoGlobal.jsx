@@ -27,7 +27,7 @@ const InfoGlobal = () => {
       <div>
         <p>Cap.de mercado:</p>
         <span>
-          {data && currencyWithoutDecimals(data.total_market_cap.usd)}{" "}
+          {data && currencyWithoutDecimals(data.total_market_cap)}{" "}
           <span>US$</span>
         </span>
       </div>
@@ -35,7 +35,7 @@ const InfoGlobal = () => {
       <div>
         <p>Volumen en 24 h:</p>
         <span>
-          {data && currencyWithoutDecimals(data.total_volume.usd)}{" "}
+          {data && currencyWithoutDecimals(data.total_volume)}{" "}
           <span>US$</span>
         </span>
       </div>

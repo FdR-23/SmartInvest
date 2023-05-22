@@ -44,13 +44,16 @@ const sequelize = require('./db.js')
 const ListCripto = require('./models/list_cripto.js');
 const TendecesCripto = require('./models/list_tendence_cripto.js');
 const DetailsCripto = require('./models/detail_cripto.js');
-const TicketsCripto = require('./models/tickertcripto.js')
+const TicketsCripto = require('./models/tickertcripto.js');
+const GlobalInfoCripto = require('./models/global_info.js');
+
 //updatingDB
 const {
   updateListCripto,
   updateTendence,
   updateDetails,
   updateTickets,
+  updateGlobalInfoCripto
 } = require('./updatedb.js')
 
 
@@ -65,13 +68,14 @@ async function main() {
   app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`);
     const intervalsUpdate = 30 * 60 * 1000;
-    const intersTickets = 12 * 60 * 60 * 1000;
+    const intersvals12hours = 12 * 60 * 60 * 1000;
     //update
     setInterval(updateListCripto, intervalsUpdate)
     setInterval(updateTendence, intervalsUpdate)
     //clearAll
     setInterval(updateDetails, intervalsUpdate)
-    setInterval(updateTickets, intersTickets)
+    setInterval(updateTickets, intersvals12hours)
+    setInterval(updateGlobalInfoCripto, intersvals12hours)
   })
 }
 
