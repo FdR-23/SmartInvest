@@ -45,30 +45,30 @@ const ItemCripto = ({ element }) => {
           <p className='text-[10px] text-gray-500 self-start'>{symbol.toUpperCase()}</p>
         </div>
       </Link>
-      <div className='text-sm  col-span-2 text-right '>
+      <div className='text-sm  col-span-2 text-right font-semibold'>
         <p> {current_price && currencyFormatter(current_price)} <span>US$</span></p>
       </div>
 
       <div className={`${price_change_percentage_1h_in_currency > 0 ? 'text-green-500' : 'text-red-500'}
-      text-center text-sm `}>
+      text-center text-sm font-semibold`}>
         <p>{price_change_percentage_1h_in_currency && price_change_percentage_1h_in_currency.toFixed(1)}</p>
       </div>
 
       <div className={`${price_change_percentage_7d_in_currency > 0 ? 'text-green-500' : 'text-red-500'}
-      text-center text-sm `}>
+      text-center text-sm font-semibold`}>
         <p>{price_change_percentage_7d_in_currency && price_change_percentage_7d_in_currency.toFixed(1)}</p>
       </div>
 
       <div className={`${price_change_percentage_24h_in_currency > 0 ? 'text-green-500' : 'text-red-500'}
-      text-center text-sm `}>
+      text-center text-sm font-semibold`}>
         <p>{price_change_percentage_24h_in_currency && price_change_percentage_24h_in_currency.toFixed(1)}</p>
       </div>
 
-      <div className='col-span-2 text-center text-[14px]'>
+      <div className='col-span-2 text-center text-[14px] font-semibold'>
         <p>{currencyFormatter && currencyFormatterWithoutDecimal(total_volume)}<span>US$</span></p>
       </div>
 
-      <div className='col-span-2 text-center text-[14px] '>
+      <div className='col-span-2 text-center text-[14px] font-semibold'>
         <p>{market_cap && currencyFormatterWithoutDecimal(market_cap)}<span>US$</span></p>
       </div>
 

@@ -20,9 +20,9 @@ const TendenceCripto = () => {
             <div className='flex flex-row items-center  col-span-2 space-x-1 pl-2 sm:pl-0'>
               <img className='w-5'
                 src={elemet.thumb} alt={`${elemet.thumb}_img`} />
-              <p>
+              <p className='font-semibold'>
                 <Link reloadDocument={true} to={`/criptomonedas/detalles/${elemet.id}`}>
-                  {elemet.name} <span>({elemet.symbol})</span>
+                  {elemet.name} <span className='font-normal'>({elemet.symbol})</span>
                 </Link>
               </p>
             </div>
