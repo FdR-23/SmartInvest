@@ -7,7 +7,7 @@ const TendenceCripto = () => {
 
   const { data, loading } = useFetch(CriptoTendence)
   if (loading == true)
-    return <div>Loading</div>
+    return
   return (
     <div className='mx-8 sm:mx-2 sm:mb-4 '>
       <div className='flex-nowrap '>
