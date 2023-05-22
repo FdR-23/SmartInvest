@@ -6,7 +6,6 @@ import { currencyWithoutDecimals } from "../../services/currencyWithoutDecimals.
 
 const InfoGlobal = () => {
   const { data } = useFetch(GlobalInfo);
-
   return (
     <div
       className="flex flex-row w-full min-w-[1024px] overflow-auto  animate-slide-in  

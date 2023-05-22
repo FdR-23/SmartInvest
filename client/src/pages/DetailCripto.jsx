@@ -304,12 +304,12 @@ const DetailCripto = () => {
         </div>
       </section>
 
-      {/* Markets */}
+      {/* Markets
       <section className='overflow-x-auto' >
         <TickersCripto
           id={id}
           totalVolumen24Hs={data && data.simpleprice[id].usd_24h_vol} />
-      </section>
+      </section> */}
 
 
     </div>
