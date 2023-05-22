@@ -2,19 +2,17 @@ const { DataTypes } = require('sequelize')
 const sequelize = require('../db.js')
 
 
-const cripto = sequelize.define(
-    'cripto',
+const listCripto = sequelize.define(
+    'list_cripto',
     {
         market_cap_rank: { type: DataTypes.INTEGER, },
         id: {
             type: DataTypes.STRING,
-            primaryKey: true,
-
         },
         image: { type: DataTypes.STRING, },
         name: {
             type: DataTypes.STRING,
-
+            primaryKey: true,
         },
         symbol: {
             type: DataTypes.STRING,
@@ -43,4 +41,4 @@ const cripto = sequelize.define(
         timestamps: false
     });
 
-module.exports = cripto;
+module.exports = listCripto;

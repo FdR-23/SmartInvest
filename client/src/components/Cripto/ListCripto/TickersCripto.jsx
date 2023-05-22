@@ -12,7 +12,6 @@ const TickersCripto = ({ id, totalVolumen24Hs }) => {
         let porcent = (volumen24Hs * 100) / totalVolumen24Hs;
         return porcent
     };
-
     return (
         <div className='px-2'>
 

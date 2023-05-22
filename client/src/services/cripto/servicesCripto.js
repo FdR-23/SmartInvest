@@ -17,7 +17,7 @@ export const CriptoTendence = async (controller) => {
     const data = axios.get('/cripto/tendence', {
         signal: controller.signal
     })
-        .then(response => response.data.coins)
+        .then(response => response.data)
 
     return data
 }

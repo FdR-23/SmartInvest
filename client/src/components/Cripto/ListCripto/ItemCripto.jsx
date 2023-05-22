@@ -16,10 +16,12 @@ const ItemCripto = ({ element }) => {
     total_volume
   } = element;
 
+
+
   const currencyFormatter = (value) => {
     const formatter = new Intl.NumberFormat('es-AR', {
       minimumFractionDigits: 2,
-      maximumSignificantDigits: 4,
+      maximumSignificantDigits: 6,
       currency: "USD",
     })
     return formatter.format(value)

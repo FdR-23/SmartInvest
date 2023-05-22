@@ -41,14 +41,20 @@ app.use("/", routes);
 
 const sequelize = require('./db.js')
 //import models
+const ListCripto = require('./models/list_cripto.js');
+const TendecesCripto = require('./models/list_tendence_cripto.js');
+const DetailsCripto = require('./models/detail_cripto.js');
 
-const Cripto = require('./models/cripto.js')
+//updatingDB
+const {
+  updateListCripto,
+  updateTendence,
+  updateDetails } = require('./updatedb.js')
 
 
 //stating the server
 async function main() {
   try {
-    await sequelize.authenticate();
     await sequelize.sync({ force: false });
     console.log('Connection has been established successfully.');
   } catch (error) {
@@ -56,7 +62,14 @@ async function main() {
   }
 
   app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}`)
+    console.log(`Example app listening on port ${PORT}`);
+    const intervalsUpdate = 10 * 60 * 1000;
+
+    //update
+    setInterval(updateListCripto, intervalsUpdate)
+    setInterval(updateTendence, intervalsUpdate)
+    //clearAll
+    setInterval(updateDetails, intervalsUpdate)
   })
 }
 
